@@ -1,0 +1,18 @@
+<h1>User info</h1>
+
+<!--詳細ページに画面遷移するボタン-->
+
+
+<h1>New book</h1><!--投稿機能-->
+
+<%= form_with model: book do |f| %>
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+  
+  <h4>Opinion</h4>
+  <%= f.text_area :body %>
+  
+  <%= f.submit 'Create Book' %>
+  
+<% end %>
+

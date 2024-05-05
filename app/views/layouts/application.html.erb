@@ -18,12 +18,14 @@
       <p>Bookers</p>
     <% if user_signed_in? %>
       <li>
-        <%= link_to 'Home', root_path %>
+        <%= link_to 'Home', books_path %>
       </li> 
       <li>
+        <!--USER作った後に遷移先指定-->
         <%= link_to 'Users', users_path %>
       </li> 
       <li>
+        <!--USER作った後に遷移先指定--><!--他の人含めた本の一覧-->
         <%= link_to 'Books', books_path %>
       </li> 
       <li>
