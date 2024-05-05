@@ -44,10 +44,11 @@
       </li>
     <% end %>
   </header>
+  <%= yield %>　  <!--これが下にあるとfooterが上にくる-->
   <footer>
     <p>CopyRight Infratop.inc</p>
   </footer>
   
-    <%= yield %>
+    
   </body>
 </html>
