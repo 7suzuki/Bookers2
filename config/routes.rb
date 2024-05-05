@@ -6,6 +6,6 @@ get 'homes/about' => 'homes#about' ,as: 'about'
 
 
 resources :users, only: [:show, :index, :edit] #1つのページで行われてることが多い 
-# resources :books, only: [:index, :show] 複数か単数か、ネストか
+resources :books, only: [:index, :show] #複数か単数か、ネストか
 
 end
