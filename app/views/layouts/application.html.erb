@@ -15,7 +15,8 @@
 
   <body class="d-flex flex-column vh-100">
     <header  class="shadow-sm">
-      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark data-bs-theme=dark">
+      <nav class="navbar navbar-expand-lg nav-dark bg-dark navbar-toggler ">
+        <span class="text-white">Bookers</span>
         <div class="container">
           <a class="navbar-brand p-3" href="/"> </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -24,7 +25,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-      <span class="text-white">Bookers</span>
+      
     <% if user_signed_in? %>
       <li class="nav-item">
         <i class="fa-solid fa-house text-white"></i>

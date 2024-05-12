@@ -2,15 +2,17 @@ class UsersController < ApplicationController
   
   # def new  end SignInで不要？
   
-  def show
-    @user = User.find(params[:id])
-    # @post_images = @user.post_images #(全件取得)
-    # @post_images = @user.post_images.page(params[:page]) #ページネーション（取得数制限）
-  end
-  
   def index
     @users = User.all
-    
+    @book = Book.new    
+  end
+  
+  def show
+    @user = User.find(params[:id])
+    @books = Book.all
+    @profile_images = @user.profile_images
+    # @post_images = @user.post_images #(全件取得)
+    # @post_images = @user.post_images.page(params[:page]) #ページネーション（取得数制限）
   end
   
   # def edit
@@ -39,7 +41,7 @@ class UsersController < ApplicationController
   private
     
   def user_params
-    params.require(:user).permit(:name, :profile_image)
+    params.require(:user).permit(:name, :profile_image, :introduction)
   end
   
 end
