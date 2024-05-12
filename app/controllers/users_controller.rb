@@ -2,37 +2,38 @@ class UsersController < ApplicationController
   
   # def new  end SignInで不要？
   
+  def show
+    @books = Book.all
+    @user = User.find(params[:id])
+    
+    # @profile_images = @user.profile_images #(全件取得)
+    # @post_images = @user.post_images.page(params[:page]) #ページネーション（取得数制限）
+  end
+  
   def index
     @users = User.all
     @book = Book.new    
   end
   
-  def show
+  def edit
+    user = User.find(params[:id])
+    unless user.id == current_user.id
+      redirect_to books_path
+    end
     @user = User.find(params[:id])
-    @books = Book.all
-    @profile_images = @user.profile_images
-    # @post_images = @user.post_images #(全件取得)
-    # @post_images = @user.post_images.page(params[:page]) #ページネーション（取得数制限）
   end
   
-  # def edit
-  #   user = User.find(params[:id])
-  #   unless user.id == current_user.id
-  #     redirect_to post_images_path
-  #   end
-  #   @user = User.find(params[:id])
-  # end
-  
-  # def update
-  #   user = User.find(params[:id])
-  #   unless user.id == current_user.id
-  #     redirect_to post_images_path
-  #   end
+  def update
+    user = User.find(params[:id])
+    unless user.id == current_user.id
+      redirect_to books_path
+    end
     
-  #   @user = User.find(params[:id])
-  #   @user.update(user_params)
-  #   redirect_to user_path(@user.id) #ユーザーの詳細ページに画面遷移
-  # end
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    flash[:notice] = "You have updated user successfully."
+    redirect_to books_path #ユーザーの詳細ページに画面遷移
+  end
   
   # def create  end
   # def destory  end

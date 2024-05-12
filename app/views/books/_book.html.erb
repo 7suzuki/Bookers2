@@ -1,7 +1,9 @@
 <h2>User info</h2>
-<!--%= f.profile_image %>-->
-<!--<p>name</p>%= user.name %>-->
-<!--<p>introduction</p>%= introduction %>-->
+<%= image_tag current_user.profile_image %>
+<p>name</p><%= current_user.name %>
+<p>introduction</p>
+<%= current_user.introduction %><br>
+
 <!--詳細ページに画面遷移するボタン-->
 <i class="fa-solid fa-user-gear"></i>
 

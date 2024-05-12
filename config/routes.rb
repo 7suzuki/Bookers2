@@ -5,7 +5,7 @@ root to: 'homes#top'
 get 'homes/about' => 'homes#about' ,as: 'about'
 
 
-resources :users, only: [:show, :index, :edit] #1つのページで行われてることが多い 
+resources :users, only: [:show, :index, :edit, :update] #1つのページで行われてることが多い 
 resources :books, only: [:new, :create, :index, :show, :edit, :destroy, :update] #複数か単数か、ネストか
 
 end
