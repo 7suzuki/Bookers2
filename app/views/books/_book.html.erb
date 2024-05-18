@@ -1,26 +1,24 @@
 <h2>User info</h2>
-<%= image_tag current_user.get_profile_image(100,100) %>
-<p>name</p><%= current_user.name %>
-<p>introduction</p>
-<%= current_user.introduction %><br>
+  <%= image_tag current_user.get_profile_image(100,100) %>
+  <p>name</p>
+    <%= current_user.name %>
+  <p>introduction</p>
+    <%= current_user.introduction %><br>
+  <!--詳細ページに画面遷移するボタン-->
+  <%= link_to edit_user_registration_path do %>
+    <i class="fa-solid fa-user-gear"></i>
+  <% end %>
 
-<!--詳細ページに画面遷移するボタン-->
-
-<%= link_to edit_user_path(current_user.id) do %>
-  <i class="fa-solid fa-user-gear"></i>
-<% end %>
-
-
-<h2>New book</h2><!--投稿機能-->
-
-<%= form_with model: book do |f| %>
-  <p>Title</p>
-  <%= f.text_field :title %>
-
-  <p>Opinion</p>
-  <%= f.text_area :body %>
-
-  <%= f.submit 'Create Book' %>
-
-<% end %>
+<!--投稿機能-->
+<h2>New book</h2>
+  <%= form_with model: book do |f| %>
+    <p>Title</p>
+      <%= f.text_field :title %>
+  
+    <p>Opinion</p>
+      <%= f.text_area :body %>
+  
+      <%= f.submit 'Create Book' %>
+  
+  <% end %>
 
