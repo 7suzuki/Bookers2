@@ -6,7 +6,8 @@
     <div class="offset-md-1">
     <div class="col-md-8">
       <h2>Book detail</h2>
-        <!--%= user_image %>-->
+        <%= image_tag @book.user.get_profile_image(100,100) %>
+        <%= link_to @user.name, user_path(@user) %>
         <%= link_to @book.title, edit_book_path(@book) %>
         <%= @book.body %>
         <%= link_to "Edit", edit_book_path(@book) %>

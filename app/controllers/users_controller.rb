@@ -3,8 +3,9 @@ class UsersController < ApplicationController
   # def new  end SignInで不要？
   
   def show
-    @books = Book.all
+    # @books = Book.all
     @user = User.find(params[:id])
+    @books = @user.books
     
     # @profile_images = @user.profile_images #(全件取得)
     # @post_images = @user.post_images.page(params[:page]) #ページネーション（取得数制限）
