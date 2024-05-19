@@ -8,7 +8,7 @@ class User < ApplicationRecord
 # :recoverable（パスワードをリセット）
 # :rememberable（ログイン情報を保存）
 # :validatable（email のフォーマットなどのバリデーション）
-validates :name, presence: true, length: { minimum: 2, maximum:20 },uniquness: true
+validates :name, presence: true, length: { minimum: 2, maximum:20 },uniqueness: true
 validates :introduction, length: { maximum:50 }
 
   has_many :books, dependent: :destroy

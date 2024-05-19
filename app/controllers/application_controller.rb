@@ -5,21 +5,21 @@ class ApplicationController < ActionController::Base
     flash[:notice] = "Signed in successfully."
     books_path
   end
-  
-  def after_sign_up_path_for(resource) 
+
+  def after_sign_up_path_for(resource)
     flash[:notice] = "Welcome! You have signed up successfully."
     books_path
   end
-  
+
   def after_sign_out_path_for(resource)
     flash[:notice] = "Signed out successfully."
     root_path
   end
-  
-  protected
+
+  private
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :password])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
   end
-  
+
 end
