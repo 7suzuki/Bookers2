@@ -9,8 +9,10 @@
     <i class="fa-solid fa-user-gear"></i>
   <% end %>
 
-<!--投稿機能-->
+<!--投稿機能/バリデーション-->
 <h2>New book</h2>
+
+<!--投稿機能-->
   <%= form_with model: book do |f| %>
     <p>Title</p>
       <%= f.text_field :title %>
