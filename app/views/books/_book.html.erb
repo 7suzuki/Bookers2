@@ -1,13 +1,31 @@
-<h2>User info</h2>
-  <%= image_tag current_user.get_profile_image(100,100) %>
-  <p>name</p>
-    <%= current_user.name %>
-  <p>introduction</p>
-    <%= current_user.introduction %><br>
-  <!--詳細ページに画面遷移するボタン-->
-  <%= link_to edit_user_path(current_user.id) do %>
-    <i class="fa-solid fa-user-gear"></i>
-  <% end %>
+<div class="container px-5 px-sm-0">
+  <div class="row">
+    <div class="col-md-3">
+      <h2>User info</h2>
+      <table>
+        <thead>
+          <%= image_tag current_user.get_profile_image(100,100) %>
+        　 <tr>
+        　   <th>name</th>
+        　     <%= current_user.name %>
+    　     </tr>
+    　     <tr>
+  　         <th>introduction</th>
+      　     <%= current_user.introduction %>
+    　     </tr>
+  　     </thead>
+　     </table>
+　 <div class="row">
+     <!--詳細ページに画面遷移するボタン-->
+      <%= link_to edit_user_path(current_user.id) do %>
+      <i class="fa-solid fa-user-gear"></i>
+      <% end %>
+　 </div>
+
+    </div>
+  </div>
+</div>
+
 
 <!--投稿機能/バリデーション-->
 <h2>New book</h2>

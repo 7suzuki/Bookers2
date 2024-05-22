@@ -1,0 +1,119 @@
+[33mcommit 603352ebd0afd9f487b24ccbe1171e2cd79b67a5[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Wed May 22 12:12:44 2024 +0000
+
+    [Fix]top
+
+[33mcommit 456a0cba124c7a28ca4f5f33ffe67f8d4b99a080[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Mon May 20 12:54:48 2024 +0000
+
+    [Add]Access restrictions
+
+[33mcommit edd7992d908eadb48aa714ab4ad88748ba5b979d[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 19 13:53:04 2024 +0000
+
+    [Add]validate
+
+[33mcommit 9db6b15ded4255e0eff4446cdd1619c5935aacda[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 19 13:37:49 2024 +0000
+
+    [Fix]index error
+
+[33mcommit a5f750bdabea15f40e367c78970f98d626ce52b2[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 19 11:21:07 2024 +0000
+
+    [Add]validates
+
+[33mcommit 0c45fdcaf374b6868ee0ddce630d30e7f4987dcb[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sat May 18 13:33:53 2024 +0000
+
+    [Add]validate
+
+[33mcommit 807c23fc44dbb2cc4d81ad8401ea8d8f4116f25a[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sat May 18 04:42:04 2024 +0000
+
+    [Fix]user_edit_path
+
+[33mcommit 77a073163fa4cee49c380c752e34eab07b4c671f[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Mon May 13 13:52:33 2024 +0000
+
+    [Add]image
+
+[33mcommit 5070ad103f333f1ce6ed451df6373218f9e103ec[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 12 14:31:21 2024 +0000
+
+    [Add]FlashMessage
+
+[33mcommit 8baece5e33150a949a3c02ceed4e5011305d07c2[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 12 10:22:34 2024 +0000
+
+    [Add]ShareLayout
+
+[33mcommit 2cc13a7220ba930678cd0a6eef11b52add9924ee[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Fri May 10 16:05:46 2024 +0000
+
+    [Add]layout
+
+[33mcommit 0274dc2165909b10c77d50647fc1ceac0b24643c[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 5 15:09:17 2024 +0000
+
+    [Add]user view
+
+[33mcommit a1e5998bc72fc568ec0e4defa2e4a01f2cd9a9a0[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 5 12:58:21 2024 +0000
+
+    [Add]update
+
+[33mcommit 106f84ab584b012f77b3a12f48223d3c455f6b97[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 5 12:43:07 2024 +0000
+
+    [Add]destroy
+
+[33mcommit 950f605a4422ac5d794fe510460755ac0c34bd23[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 5 12:25:38 2024 +0000
+
+    [Add]show
+
+[33mcommit e54166dcf78a0fb349393ec68704654ca6e7161e[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 5 09:32:35 2024 +0000
+
+    [Add]book show
+
+[33mcommit 08c4a190a5b89e8acc60ac037682f8c9128573ea[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sun May 5 04:23:17 2024 +0000
+
+    [Fix]logout
+
+[33mcommit e58507482f299c591b1bdf022e87629430c90a3e[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Sat May 4 07:58:52 2024 +0000
+
+    [Add] about
+
+[33mcommit 42ffdff8c757a11d9d015138bfc7c1fae85991f8[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Fri May 3 15:07:30 2024 +0000
+
+    [Add]Bootstrap
+
+[33mcommit ea428a6c78a9210ca202d8abb96da1ed7db8be16[m
+Author: 7suzuki <162399385+7suzuki@users.noreply.github.com>
+Date:   Fri May 3 06:34:50 2024 +0000
+
+    Initial Commit

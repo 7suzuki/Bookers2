@@ -5,81 +5,86 @@
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-  
-  <script src="https://kit.fontawesome.com/2b6ceaf15c.js" crossorigin="anonymous"></script>
-  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-  
+    
+    <script src="https://kit.fontawesome.com/2b6ceaf15c.js" crossorigin="anonymous"></script>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="d-flex flex-column vh-100">
-    <header  class="shadow-sm">
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-toggler ">
-        <%= link_to 'Bookers', root_path, class: 'text-white' %>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container">
-          <a class="navbar-brand p-3" href="/"> </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <%= link_to 'Bookers', root_path, class: "navbar-brand text-light" %>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-      
-    <% if user_signed_in? %>
-      <li class="nav-item">
-        <i class="fa-solid fa-house text-white"></i>
-        <%= link_to 'Home', user_path(current_user), class: 'nav-link text-white' %>
-      </li> 
-      <li class="nav-item">
-        <!--USER作った後に遷移先指定-->
-        <i class="fa-solid fa-users text-white"></i>
-        <%= link_to 'Users', users_path, class: 'nav-link text-white' %>
-      </li> 
-      <li class="nav-item">
-        <i class="fa-solid fa-book-open text-white"></i>
-        <%= link_to 'Books', books_path, class: 'nav-link text-white' %>
-      </li> 
-      <li class="nav-item">
-        <i class="fa-solid fa-right-from-bracket text-white"></i>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-white' %>
-      </li>
-    <% else %>
-      <li class="nav-item">
-        <i class="fa-solid fa-house text-white"></i>
-        <%= link_to 'Home', root_path, class: 'nav-link text-white' %>
-      </li>
-      <li class="nav-item text-white">
-        <i class="fa-solid fa-link"></i>
-        <%= link_to 'About', about_path, class: 'nav-link text-white' %>
-      </li>
-      <li class="nav-item text-white">
-        <i class="fa-solid fa-user-plus"></i>
-        <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link text-white' %>
-      </li>
-      <li class="nav-item text-white">
-        <i class="fa-solid fa-right-to-bracket"></i>
-        <%= link_to 'Log in', new_user_session_path, class: 'nav-link text-white' %>
-      </li>
-    <% end %>
-       </ul>
+          <ul class="navbar-nav ml-auto">
+            <% if user_signed_in? %>
+            <li>
+              <%= link_to 'Home', user_path(current_user), class: 'nav-link text-light' %>
+              <i class="fa-solid fa-house text-light"></i>
+            </li> 
+            <li>
+              <%= link_to 'Users', users_path, class: 'nav-link text-light' %>
+              <i class="fa-solid fa-users text-light"></i>
+            </li>
+            <li>
+              <%= link_to 'Home', user_path(current_user), class: 'nav-link text-light' %>
+              <i class="fa-solid fa-house text-light"></i>
+            </li> 
+            <li>
+              <%= link_to 'Books', books_path, class: 'nav-link text-light' %>
+              <i class="fa-solid fa-book-open text-light"></i>
+            </li> 
+            <li>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-light' %>
+              <i class="fa-solid fa-right-from-bracket text-light"></i>
+            </li>
+            
+            <% else %>
+            <li>
+              <%= link_to 'Home', root_path, class: 'nav-link text-light' %>
+              <i class="fa-solid fa-house text-light"></i>
+            </li>
+            <li>
+              <%= link_to 'About', about_path, class: 'nav-link text-light' %>
+              <i class="fa-solid fa-link text-light"></i>
+            </li>
+            <li>
+              <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link text-light' %>
+              <i class="fa-solid fa-user-plus text-light"></i>
+            </li>
+            <li>
+              <%= link_to 'Log in', new_user_session_path, class: 'nav-link text-light' %>
+              <i class="fa-solid fa-right-to-bracket text-light"></i>
+            </li>
+            <% end %>
+          </ul>
           </div>
         </div>
       </nav>
+    </header>
     
+    <main  class="mb-auto">
+      <% flash.each do |message_type, message| %>
+        <div class="flash-message <%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>　  <!--これが下にあるとfooterが上にくる-->  
+    </main>
     
-  </header>
-  <main  class="mb-auto">
-    <% flash.each do |message_type, message| %>
-      <div class="flash-message <%= message_type %>"><%= message %></div>
-    <% end %>
-    <%= yield %>　  <!--これが下にあるとfooterが上にくる-->  
-  </main>
-  
-  <footer  class="bg-white text-dark pt-5 pb-4">
-    <p>CopyRight Infratop.inc</p>
-  </footer>
-  
+    <footer>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="row">
+            <div class="mx-auto">
+              <p>CopyRight Infratop.inc</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     
   </body>
 </html>
