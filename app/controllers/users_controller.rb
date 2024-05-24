@@ -1,15 +1,11 @@
 class UsersController < ApplicationController
   before_action :is_matching_login_user, only: [:edit, :update]
-  # def new  end SignInで不要？
 
   def show
-    # @books = Book.all
     @user = User.find(params[:id])
     @books = @user.books
     @book = Book.new
 
-    # @profile_images = @user.profile_images #(全件取得)
-    # @post_images = @user.post_images.page(params[:page]) #ページネーション（取得数制限）
   end
 
   def index
@@ -31,10 +27,6 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-
-  # def create  end
-  # def destory  end
-
 
   private
 
