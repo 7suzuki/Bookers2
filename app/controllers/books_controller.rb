@@ -14,6 +14,7 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id) #@bookにすることで今作ったbookになる
     else
       @books = Book.all
+      @user = current_user
       render :index
     end
   end
@@ -21,7 +22,7 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     @user = User.find(@book.user_id)
-    
+
   end
 
   def index
@@ -49,13 +50,13 @@ class BooksController < ApplicationController
     book.destroy
     redirect_to books_path
   end
-  
+
   private
 
   def book_params
     params.require(:book).permit(:title, :body, :user_id)
   end
-  
+
     def is_matching_login_user
       if params[:id]
         book = Book.find(params[:id])

@@ -16,12 +16,10 @@
   　     </thead>
 　     </table>
 　 <div class="row">
-　   <% if user == current_user %>
        <!--詳細ページに画面遷移するボタン-->
         <%= link_to edit_user_path(user.id) do %>
         <i class="fa-solid fa-user-gear"></i>
         <% end %>
-      <% end %>
 　 </div>
 
     </div>
