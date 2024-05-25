@@ -1,0 +1,23 @@
+[33mcbedbdd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m [Fix]layout
+[33mffb5b13[m [Fix]update ridirect
+[33maa8800c[m [Remove]Bootstrap
+[33m60aa566[m [Remove]Bootstrap
+[33m456a0cb[m [Add]Access restrictions
+[33medd7992[m [Add]validate
+[33m9db6b15[m [Fix]index error
+[33ma5f750b[m [Add]validates
+[33m0c45fdc[m [Add]validate
+[33m807c23f[m [Fix]user_edit_path
+[33m77a0731[m [Add]image
+[33m5070ad1[m [Add]FlashMessage
+[33m8baece5[m [Add]ShareLayout
+[33m2cc13a7[m [Add]layout
+[33m0274dc2[m [Add]user view
+[33ma1e5998[m [Add]update
+[33m106f84a[m [Add]destroy
+[33m950f605[m [Add]show
+[33me54166d[m [Add]book show
+[33m08c4a19[m [Fix]logout
+[33me585074[m [Add] about
+[33m42ffdff[m [Add]Bootstrap
+[33mea428a6[m Initial Commit

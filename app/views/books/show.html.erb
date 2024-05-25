@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-      <%= render 'book',book:@book %>
+      <%= render 'book',book: @book, user: @user%>
     </div>
     <div class="col-md-8 offset-md-1">
       <h2>Book detail</h2>
@@ -9,8 +9,11 @@
         <%= link_to @user.name, user_path(@user) %>
         <%= link_to @book.title, edit_book_path(@book) %>
         <%= @book.body %>
-        <%= link_to "Edit", edit_book_path(@book) %>
-        <%= link_to "Destroy", book_path(@book), method: :delete, "data-confirm" => "Are you sure？" %>
+        
+        <% if @book.user == current_user %>
+          <%= link_to "Edit", edit_book_path(@book) %>
+          <%= link_to "Destroy", book_path(@book), method: :delete, "data-confirm" => "Are you sure？" %>
+        <% end %>
     </div>
   </div>
 </div>

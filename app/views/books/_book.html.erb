@@ -4,21 +4,23 @@
       <h2>User info</h2>
       <table>
         <thead>
-          <%= image_tag current_user.get_profile_image(100,100) %>
+          <%= image_tag user.get_profile_image(100,100) %>
         　 <tr>
         　   <th>name</th>
-        　     <%= current_user.name %>
+        　     <%= user.name %>
     　     </tr>
     　     <tr>
   　         <th>introduction</th>
-      　     <%= current_user.introduction %>
+      　     <%= user.introduction %>
     　     </tr>
   　     </thead>
 　     </table>
 　 <div class="row">
-     <!--詳細ページに画面遷移するボタン-->
-      <%= link_to edit_user_path(current_user.id) do %>
-      <i class="fa-solid fa-user-gear"></i>
+　   <% if user == current_user %>
+       <!--詳細ページに画面遷移するボタン-->
+        <%= link_to edit_user_path(user.id) do %>
+        <i class="fa-solid fa-user-gear"></i>
+        <% end %>
       <% end %>
 　 </div>
 
@@ -31,7 +33,7 @@
 <h2>New book</h2>
 
 <!--投稿機能-->
-  <%= form_with model: book do |f| %>
+  <%= form_with model: Book.new do |f| %>
     <p>Title</p>
       <%= f.text_field :title %>
   
