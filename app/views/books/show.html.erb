@@ -7,8 +7,14 @@
       <h2>Book detail</h2>
         <%= image_tag @book.user.get_profile_image(100,100) %>
         <%= link_to @user.name, user_path(@user) %>
-        <%= link_to @book.title, edit_book_path(@book) %>
-        <%= @book.body %>
+        
+        <% if @book.user == current_user %>
+          <%= link_to @book.title, edit_book_path(@book) %>
+          <%= @book.body %>
+        <% else %>
+          <%= link_to @book.title, books_path %>
+          <%= @book.body %>
+        <% end %>
         
         <% if @book.user == current_user %>
           <%= link_to "Edit", edit_book_path(@book) %>
